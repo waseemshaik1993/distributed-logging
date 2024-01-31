@@ -40,3 +40,9 @@ spec:
         - name: AWS_SESSION_TOKEN
           value: "IQoJb3JpZ2luX2VjEEoaCXVzLWVhc3QtMSJGMEQCIGtGEo/TD943km1jrW1pZmEjmTAR8M0oThZjOb6kf1VPAiBmjHTIF6eqhmD/MhIMBrJSBocEFfBk5zjqiPv65tbG5iqOAwgTEAMaDDQ5MDE2NzY2OTk0MCIMQtbuEB8KImaVvSfJKusCSCslIqQjKUv1RB97DRcDm5zcbv0O8hgSQ5e1dPEIzWoAuxgYOixH21CFC/kTeTMS4GrDEffaYeOGRmi1rl7mQ09ec+vIw58O0aru2dGz6nbeQ3tSDG+RplV1A7+zWi7hvuwpXtcL+e8rVVBtlOI++gXzUYHeyYya+hQ5aEO/08k85wgRCQvrrVPEFgSQhcotTq7oIeWhmUEZ3oWxGTsX91erC6a6pqwqU7kgz5jGzV8JTCEjSzJ3N1KC4iW+x6wzC6KCN3wSFOzRQjQpCPrdnyqgkJouRHOa2OBARo3It8mhA3xStcuAW+ic5IyPYQyVEuHq7n/jE6UGFjdBQxb0HgEeAq0IqhuLYh15RYomznf7Tu5o+1XqMOeGAqHYotaFI2Z07Vg7KOHy1ESYKrdb5bMfcAEHKvdizmXmMlqUnYj+2RE1ZnOCK+Tpt5tuPP1UgMX2gK1eKANOZ9FHhqZ2ru+O70RUSa8NWwvoMJKT460GOqcBTefOPBsQV3l0XEvdoVMHTpcfCeV7cBdEgr03G0IAfajujtwE2C6fKNH8g7zyp8iFe1AW+jPLzDJL/DZu7dtMHI1iN5+kTnFr9qgyLQVqU9mFlcz8dDahxZrdCGwIlNgTcdR0HVmpAc0MmnQBO9oTrbHhxLaGcE020CAobnym28mc9t2G1Db9PhbCm7tNqDYruNmL5ehUSWsLqrFA8GC0VQJ/UqkSRNE="
         volumeMounts:
+          - name: varlogcontainers
+            mountPath: /var/log/containers
+      volumes:
+        - name: varlogcontainers
+          hostPath:
+            path: /var/log/containers
